@@ -322,37 +322,25 @@
 
 .auth-primary-button {
   width: 100%;
-
   height: 50px;
-
   border: none;
-
   border-radius: 6px;
-
-  background: var(--hazel-burgundy);
-
-  color: var(--white);
-
-  font-size: 14px;
-
+  background: var(--white);
+  color: var(--hazel-burgundy);
+  font-size: 18px;
   font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.25s;
+  cursor: pointer; 
+ transition: 0.25s; 
 }
 
-.auth-primary-button:hover {
+/* .auth-primary-button:hover {
   background: var(--hazel-dark-burgundy);
-
   transform: translateY(-1px);
-}
+} */
 
 .auth-primary-button:disabled {
   opacity: 0.6;
-
   cursor: not-allowed;
-
   transform: none;
 }
 
@@ -362,33 +350,21 @@
 
 .auth-error {
   margin-bottom: 15px;
-
   padding: 11px;
-
   border-radius: 5px;
-
   background: #fff0ee;
-
   color: var(--error);
-
   font-size: 12px;
-
   text-align: center;
 }
 
 .auth-success {
   margin-bottom: 15px;
-
   padding: 11px;
-
   border-radius: 5px;
-
   background: #edf9f0;
-
   color: var(--success);
-
-  font-size: 12px;
-
+  font-size: 18;
   text-align: center;
 }
 
@@ -463,25 +439,16 @@
 
 .auth-benefits {
   display: flex;
-
   justify-content: space-between;
-
   margin-top: 30px;
-
   padding-top: 25px;
-
-  border-top: 1px solid #eee;
 }
 
 .auth-benefits div {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   gap: 5px;
-
   color: var(--hazel-dark-burgundy);
 }
 
@@ -501,31 +468,20 @@
 
 .otp-mobile {
   text-align: center;
-
   padding: 13px;
-
   margin-bottom: 25px;
-
   background: #fff8ef;
-
   border-radius: 6px;
-
   color: var(--hazel-dark);
-
   font-size: 13px;
 }
 
 .otp-mobile button {
   margin-left: 8px;
-
   border: none;
-
   background: none;
-
   color: var(--hazel-burgundy);
-
   font-weight: 600;
-
   cursor: pointer;
 }
 
@@ -539,38 +495,26 @@
 
 .otp-input-container {
   display: flex;
-
   justify-content: center;
-
   gap: 9px;
-
   margin: 15px 0 18px;
 }
 
 .otp-input {
   width: 45px;
-
   height: 50px;
-
   text-align: center;
-
   font-size: 20px;
-
   font-weight: 600;
-
   color: var(--hazel-dark-burgundy);
-
   border: 1px solid #ddd;
-
   border-radius: 6px;
-
   outline: none;
 }
 
 .otp-input:focus,
 .otp-input.filled {
   border-color: var(--hazel-burgundy);
-
   box-shadow: 0 0 0 3px rgba(120, 5, 36, 0.08);
 }
 
@@ -580,11 +524,8 @@
 
 .otp-timer {
   text-align: center;
-
   margin-bottom: 22px;
-
   color: #777;
-
   font-size: 12px;
 }
 
@@ -594,13 +535,9 @@
 
 .resend-button {
   border: none;
-
   background: none;
-
   color: var(--hazel-burgundy);
-
   font-weight: 600;
-
   cursor: pointer;
 }
 
@@ -610,27 +547,18 @@
 
 .security-message {
   display: flex;
-
   gap: 10px;
-
   align-items: center;
-
   margin-top: 25px;
-
   padding: 12px;
-
   background: #fff8ef;
-
   border-radius: 6px;
 }
 
 .security-message p {
   margin: 0;
-
   color: #777;
-
   font-size: 10px;
-
   line-height: 1.5;
 }
 
@@ -684,6 +612,8 @@
   align-items: center;
   margin-top: 0;
   margin-bottom: 10px;
+  background-color: #780524;
+  color: white;
 }
 
 .google-login-container > div {
@@ -699,8 +629,8 @@
   height: 44px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  background: #ffffff;
-  color: #333333;
+  background-color: #780524 !important;
+  color:white !important;
   font-size: 14px;
   font-weight: 500;
   cursor: default;

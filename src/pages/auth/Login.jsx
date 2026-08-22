@@ -215,8 +215,7 @@ const Login = () => {
 
             <p>Login to continue your shopping journey</p>
             <div className="login-tab">
-              <span>Login      </span>
-            
+              <span>Login </span>
             </div>
           </div>
 
@@ -261,7 +260,7 @@ const Login = () => {
           ================================================== */}
 
           <div className="auth-divider">
-            <span>or</span>
+            <span>Or</span>
           </div>
 
           {/* =================================================
@@ -277,7 +276,7 @@ const Login = () => {
               <GoogleLogin
                 onSuccess={handleGoogleSuccess}
                 onError={handleGoogleError}
-                theme="outline"
+                theme="#780524"
                 size="large"
                 text="continue_with"
                 shape="rectangular"
@@ -285,12 +284,11 @@ const Login = () => {
               />
             )}
           </div>
-
           {/* =================================================
               BOTTOM FEATURES
           ================================================== */}
 
-          <div className="auth-benefits">
+          {/* <div className="auth-benefits">
             <div>
               <span>♧</span>
               <small>Secure Login</small>
@@ -305,7 +303,7 @@ const Login = () => {
               <span>✓</span>
               <small>Trusted Service</small>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
