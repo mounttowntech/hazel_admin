@@ -1,45 +1,63 @@
-
 import {
-  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 
-import Login from "../../src/pages/auth/Login";
-import VerifyOTP from "../../src/pages/auth/VerifyOTP";
+import Login from "../pages/auth/Login";
+import VerifyOTP from "../pages/auth/VerifyOTP";
+
+import AdminLayout from "../components/admin/Layout/AdminLayout";
+
+import Dashboard from "../pages/dashboard/Dashboard";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <Routes>
 
-      <Routes>
+      {/* =================================
+          AUTH ROUTES
+      ================================= */}
 
-        {/* AUTH */}
+      <Route
+        path="/login"
+        element={<Login />}
+      />
 
-        <Route
-          path="/login"
-          element={<Login />}
-        />
-
-       <Route
+      <Route
         path="/verify-otp"
         element={<VerifyOTP />}
       />
 
-        {/* HOME */}
+      {/* =================================
+          ADMIN ROUTES
+      ================================= */}
+
+      <Route element={<AdminLayout />}>
 
         <Route
-          path="/"
-          element={
-            <div>
-              Hazel E-Commerce Home
-            </div>
-          }
+          path="/dashboard"
+          element={<Dashboard />}
         />
 
-      </Routes>
+      </Route>
 
-    </BrowserRouter>
+      {/* =================================
+          DEFAULT ROUTE
+      ================================= */}
+
+      {/* 
+      <Route
+        path="*"
+        element={
+          <Navigate
+            to="/login"
+            replace
+          />
+        }
+      />
+      */}
+
+    </Routes>
   );
 };
 

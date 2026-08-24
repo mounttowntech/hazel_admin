@@ -227,7 +227,7 @@ useEffect(() => {
 
         setTimeout(() => {
 
-          navigate("/");
+          navigate("/dashboard");
 
         }, 700);
 
