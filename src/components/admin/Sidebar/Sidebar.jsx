@@ -36,7 +36,7 @@ const navConfig = [
       { label: "Product Variants", path: "/admin/catalog/product-variants" },
       { label: "Sizes", path: "/admin/catalog/sizes" },
       { label: "Colors", path: "/admin/catalog/colors" },
-      { label: "Product Images", path: "/admin/catalog/product-images" },
+      
     ],
   },
   {

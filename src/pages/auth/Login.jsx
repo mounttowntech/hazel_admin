@@ -128,7 +128,7 @@ const Login = () => {
         // GO HOME
         // ======================================================
 
-        navigate("/dashboard");
+        navigate("/admin/dashboard");
       } else {
         setError(response.message || "Google login failed.");
       }
