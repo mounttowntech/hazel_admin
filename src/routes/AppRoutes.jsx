@@ -9,9 +9,11 @@ import Dashboard from "../pages/dashboard/Dashboard";
 import CategoryList from "../pages/admin/catalog/categories/CategoryList";
 import BrandList from "../pages/admin/catalog/brands/BrandList";
 import LengthList from "../pages/admin/catalog/product-length/LengthList";
-import NeckPatternList from "../pages/admin/catalog/neck-patterns/NeckPatternList";
+// import NeckPatternList from "../pages/admin/catalog/neck-patterns/NeckPatternList";
 import ProductList from "../pages/admin/catalog/products/ProductList";
 import ProductVariantList from "../pages/admin/catalog/productVariant/ProductVariant";
+import SizeList from "../pages/admin/catalog/size/SizeList";
+import ColorList from "../pages/admin/catalog/color/Colorlist"
 
 const AppRoutes = () => {
   return (
@@ -30,9 +32,11 @@ const AppRoutes = () => {
         <Route path="/admin/catalog/categories" element={<CategoryList />} />
         <Route path="/admin/catalog/brands" element={<BrandList />} />
         <Route path="/admin/catalog/product-length" element={<LengthList />} />
-        <Route path="/admin/catalog/neck-patterns" element={<NeckPatternList />} />
+        {/* <Route path="/admin/catalog/neck-patterns" element={<NeckPatternList />} /> */}
         <Route path="/admin/catalog/products" element={<ProductList />} />
         <Route path="/admin/catalog/product-variants" element={<ProductVariantList />} />
+        <Route path="/admin/catalog/size" element={<SizeList />} />
+        <Route path="/admin/catalog/colors" element={<ColorList />} />
         {/* add more admin routes here, all under this same AdminLayout wrapper */}
       </Route>
 

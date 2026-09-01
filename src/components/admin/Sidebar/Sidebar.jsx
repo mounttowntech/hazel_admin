@@ -31,10 +31,10 @@ const navConfig = [
       { label: "Categories", path: "/admin/catalog/categories" },
       { label: "Brands", path: "/admin/catalog/brands" },
       { label: "Product Length", path: "/admin/catalog/product-length" },
-      { label: "Neck Patterns", path: "/admin/catalog/neck-patterns" },
+      // { label: "Neck Patterns", path: "/admin/catalog/neck-patterns" },
       { label: "Products", path: "/admin/catalog/products" },
       { label: "Product Variants", path: "/admin/catalog/product-variants" },
-      { label: "Sizes", path: "/admin/catalog/sizes" },
+      { label: "Sizes", path: "/admin/catalog/size" },
       { label: "Colors", path: "/admin/catalog/colors" },
       
     ],
