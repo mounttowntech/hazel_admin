@@ -8,6 +8,10 @@ import AdminLayout from "../components/admin/Layout/AdminLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
 import CategoryList from "../pages/admin/catalog/categories/CategoryList";
 import BrandList from "../pages/admin/catalog/brands/BrandList";
+import LengthList from "../pages/admin/catalog/product-length/LengthList";
+import NeckPatternList from "../pages/admin/catalog/neck-patterns/NeckPatternList";
+import ProductList from "../pages/admin/catalog/products/ProductList";
+import ProductVariantList from "../pages/admin/catalog/productVariant/ProductVariant";
 
 const AppRoutes = () => {
   return (
@@ -22,9 +26,13 @@ const AppRoutes = () => {
           ADMIN ROUTES
       ================================= */}
       <Route element={<AdminLayout />}>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/catalog/categories" element={<CategoryList />} />
         <Route path="/admin/catalog/brands" element={<BrandList />} />
+        <Route path="/admin/catalog/product-length" element={<LengthList />} />
+        <Route path="/admin/catalog/neck-patterns" element={<NeckPatternList />} />
+        <Route path="/admin/catalog/products" element={<ProductList />} />
+        <Route path="/admin/catalog/product-variants" element={<ProductVariantList />} />
         {/* add more admin routes here, all under this same AdminLayout wrapper */}
       </Route>
 
