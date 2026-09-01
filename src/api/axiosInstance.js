@@ -1,19 +1,27 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5004/api",
+  baseURL: "/api",
   withCredentials: true,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-axiosInstance.interceptors.request.use((config) => {
-  const token = localStorage.getItem("hazelToken"); // ← match the key Login.jsx actually uses
+axiosInstance.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("hazelToken");
 
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
   }
-
-  return config;
-});
+);
 
 axiosInstance.interceptors.response.use(
   (response) => {
@@ -27,6 +35,7 @@ axiosInstance.interceptors.response.use(
       error.response?.status,
       error.response?.data || error.message
     );
+
     return Promise.reject(error);
   }
 );
