@@ -70,6 +70,19 @@ const ProductList = () => {
     setShowForm(true);
   };
 
+  // First image/video across all color variants, for the row thumbnail
+  const getThumbnail = (product) => {
+    for (const variant of product.variants || []) {
+      const media = variant.media?.find((m) => m.type === "image") || variant.media?.[0];
+      if (media?.imageURL) return media.imageURL;
+    }
+    return null;
+  };
+
+  const getColorList = (product) => {
+    return (product.variants || []).map((v) => v.color).filter(Boolean).join(", ") || "—";
+  };
+
   return (
     <div className="prod-page">
       <div className="prod-page-header">
@@ -101,8 +114,9 @@ const ProductList = () => {
               <tr>
                 <th>S.No</th>
                 <th>Product</th>
-                <th>Category</th>
+                <th>Sub Category</th>
                 <th>Brand</th>
+                <th>Colors</th>
                 <th>Status</th>
                 <th>Actions</th>
               </tr>
@@ -110,52 +124,59 @@ const ProductList = () => {
             <tbody>
               {products.length === 0 ? (
                 <tr>
-                  <td colSpan="6" className="prod-empty">
+                  <td colSpan="7" className="prod-empty">
                     No products found.
                   </td>
                 </tr>
               ) : (
-                products.map((product, index) => (
-                  <tr key={product._id}>
-                    <td className="prod-sno">{index + 1}</td>
-                    <td>
-                      <div className="prod-name-cell">
-                        {product.images?.[0] ? (
-                          <img
-                            src={`${IMAGE_BASE_URL}${product.images[0]}`}
-                            alt={product.name}
-                            className="prod-thumb"
-                          />
-                        ) : (
-                          <div className="prod-thumb prod-thumb-placeholder">
-                            {product.name?.charAt(0)?.toUpperCase() || "?"}
-                          </div>
-                        )}
-                        <span className="prod-name-text">{product.name}</span>
-                      </div>
-                    </td>
-                    <td className="prod-meta">{product.category?.name || "—"}</td>
-                    <td className="prod-meta">{product.brand?.name || "—"}</td>
-                    <td>
-                      <span className={`prod-status-badge ${product.status}`}>
-                        {product.status}
-                      </span>
-                    </td>
-                    <td>
-                      <div className="prod-actions">
-                        <button className="prod-icon-btn edit" onClick={() => handleEdit(product)}>
-                          Edit
-                        </button>
-                        <button
-                          className="prod-icon-btn delete"
-                          onClick={() => handleDelete(product._id)}
+                products.map((product, index) => {
+                  const thumbnail = getThumbnail(product);
+
+                  return (
+                    <tr key={product._id}>
+                      <td className="prod-sno">{index + 1}</td>
+                      <td>
+                        <div className="prod-name-cell">
+                          {thumbnail ? (
+                            <img
+                              src={`${IMAGE_BASE_URL}${thumbnail}`}
+                              alt={product.name}
+                              className="prod-thumb"
+                            />
+                          ) : (
+                            <div className="prod-thumb prod-thumb-placeholder">
+                              {product.name?.charAt(0)?.toUpperCase() || "?"}
+                            </div>
+                          )}
+                          <span className="prod-name-text">{product.name}</span>
+                        </div>
+                      </td>
+                      <td className="prod-meta">{product.subCategoryId?.name || "—"}</td>
+                      <td className="prod-meta">{product.brandId?.name || "—"}</td>
+                      <td className="prod-meta">{getColorList(product)}</td>
+                      <td>
+                        <span
+                          className={`prod-status-badge ${product.isActive ? "active" : "inactive"}`}
                         >
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))
+                          {product.isActive ? "Active" : "Inactive"}
+                        </span>
+                      </td>
+                      <td>
+                        <div className="prod-actions">
+                          <button className="prod-icon-btn edit" onClick={() => handleEdit(product)}>
+                            Edit
+                          </button>
+                          <button
+                            className="prod-icon-btn delete"
+                            onClick={() => handleDelete(product._id)}
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>

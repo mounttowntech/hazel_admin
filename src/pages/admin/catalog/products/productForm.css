@@ -212,3 +212,159 @@
 .prod-btn-secondary:hover {
   background: #e6e6e6;
 }
+
+/* ============================================================
+   COLOR VARIANT SECTION (new)
+   ============================================================ */
+
+.prod-variant-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prod-variant-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fbfaf8;
+}
+
+.prod-variant-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prod-variant-card-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #780524;
+}
+
+.prod-variant-remove-btn {
+  background: none;
+  border: none;
+  color: #b3261e;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.prod-variant-remove-btn:hover {
+  text-decoration: underline;
+}
+
+.prod-add-variant-btn {
+  align-self: flex-start;
+  background: #f7e7ec;
+  color: #780524;
+  border: 1px dashed #780524;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.prod-add-variant-btn:hover {
+  background: #f0d8de;
+}
+
+.prod-inline-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.prod-inline-checkbox input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  accent-color: #780524;
+}
+
+/* ============================================================
+   SIZE ROWS (new)
+   ============================================================ */
+
+.prod-size-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prod-size-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prod-size-row select,
+.prod-size-row input[type="number"] {
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prod-size-row select:focus,
+.prod-size-row input[type="number"]:focus {
+  border-color: #780524;
+  box-shadow: 0 0 0 3px rgba(120, 5, 36, 0.12);
+}
+
+.prod-size-row select {
+  flex: 1;
+}
+
+.prod-size-row input[type="number"] {
+  width: 90px;
+}
+
+.prod-size-remove-btn {
+  background: none;
+  border: none;
+  color: #b3261e;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.prod-size-remove-btn:hover {
+  color: #8a1c14;
+}
+
+.prod-add-size-btn {
+  align-self: flex-start;
+  background: none;
+  border: 1px dashed #ccc;
+  color: #666;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.prod-add-size-btn:hover {
+  border-color: #780524;
+  color: #780524;
+}

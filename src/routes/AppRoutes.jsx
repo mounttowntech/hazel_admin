@@ -7,6 +7,7 @@ import AdminLayout from "../components/admin/Layout/AdminLayout";
 
 import Dashboard from "../pages/dashboard/Dashboard";
 import CategoryList from "../pages/admin/catalog/categories/CategoryList";
+import SubCategoryList from "../pages/admin/catalog/subCategory/SubCategoryList";
 import BrandList from "../pages/admin/catalog/brands/BrandList";
 import LengthList from "../pages/admin/catalog/product-length/LengthList";
 // import NeckPatternList from "../pages/admin/catalog/neck-patterns/NeckPatternList";
@@ -30,6 +31,7 @@ const AppRoutes = () => {
       <Route element={<AdminLayout />}>
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/catalog/categories" element={<CategoryList />} />
+        <Route path="/admin/catalog/subcategories" element={<SubCategoryList />} />
         <Route path="/admin/catalog/brands" element={<BrandList />} />
         <Route path="/admin/catalog/product-length" element={<LengthList />} />
         {/* <Route path="/admin/catalog/neck-patterns" element={<NeckPatternList />} /> */}
