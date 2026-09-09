@@ -1,0 +1,443 @@
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.new-arrival-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #fffaf5;
+  color: #231918;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.new-arrival-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.page-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #780524;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.new-arrival-header h1 {
+  margin: 0;
+  color: #52131e;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.new-arrival-header p {
+  margin: 8px 0 0;
+  color: #7a6b68;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   ADD BUTTON
+========================================================== */
+
+.new-arrival-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 20px;
+  background: #780524;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 5px 15px rgba(120, 5, 36, 0.18);
+}
+
+.new-arrival-add-btn:hover {
+  background: #52131e;
+  transform: translateY(-1px);
+}
+
+.new-arrival-add-btn span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.new-arrival-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 14px 18px;
+  border: 1px solid #e6b8b8;
+  border-radius: 9px;
+  background: #fff0f0;
+  color: #a12828;
+  font-size: 14px;
+}
+
+.new-arrival-error button {
+  border: none;
+  background: transparent;
+  color: #780524;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.new-arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(390px, 1fr)
+  );
+  gap: 22px;
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.new-arrival-card {
+  overflow: hidden;
+  border: 1px solid #eaded6;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(55, 31, 25, 0.06);
+  transition: 0.25s ease;
+}
+
+.new-arrival-card:hover {
+  box-shadow: 0 10px 28px rgba(55, 31, 25, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   CARD TOP
+========================================================== */
+
+.arrival-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 20px 10px;
+}
+
+.arrival-card-top h2 {
+  margin: 0;
+  color: #52131e;
+  font-size: 19px;
+}
+
+.arrival-card-top p {
+  margin: 5px 0 0;
+  color: #8b7b76;
+  font-size: 13px;
+}
+
+.product-count {
+  flex-shrink: 0;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #f8ead8;
+  color: #780524;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.arrival-description {
+  margin: 5px 20px 18px;
+  color: #6f6260;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   PRODUCTS
+========================================================== */
+
+.arrival-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 0 20px 20px;
+}
+
+.arrival-product {
+  min-width: 0;
+}
+
+.arrival-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.82;
+  border-radius: 8px;
+  background: #f7f1ed;
+}
+
+.arrival-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a89a95;
+  font-size: 10px;
+}
+
+.featured-badge {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: #780524;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   PRODUCT INFO
+========================================================== */
+
+.arrival-product-info {
+  position: relative;
+  padding-top: 7px;
+}
+
+.order-number {
+  color: #a18f89;
+  font-size: 10px;
+}
+
+.arrival-product-info h3 {
+  overflow: hidden;
+  margin: 3px 0 0;
+  color: #382725;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.arrival-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-top: 1px solid #f0e7e1;
+}
+
+.created-date {
+  color: #9b8c87;
+  font-size: 11px;
+}
+
+.arrival-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.arrival-actions button {
+  border-radius: 6px;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn {
+  border: 1px solid #d8c3b5;
+  background: #fff;
+  color: #780524;
+}
+
+.edit-btn:hover {
+  background: #fdf3eb;
+}
+
+.delete-btn {
+  border: 1px solid #edcaca;
+  background: #fff5f5;
+  color: #b32929;
+}
+
+.delete-btn:hover {
+  background: #ffe8e8;
+}
+
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.new-arrival-empty {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 50px 30px;
+  border: 1px dashed #ddc9bd;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #f8ead8;
+  color: #780524;
+  font-size: 27px;
+}
+
+.new-arrival-empty h2 {
+  margin: 0;
+  color: #52131e;
+}
+
+.new-arrival-empty p {
+  margin: 10px auto 22px;
+  color: #7e706c;
+  font-size: 14px;
+}
+
+.new-arrival-empty button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: #780524;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.new-arrival-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #7e706c;
+}
+
+.new-arrival-spinner {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 12px;
+  border: 3px solid #eaded6;
+  border-top-color: #780524;
+  border-radius: 50%;
+  animation: arrivalSpin 0.8s linear infinite;
+}
+
+@keyframes arrivalSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+  .new-arrival-page {
+    padding: 20px;
+  }
+
+  .new-arrival-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .new-arrival-add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .new-arrival-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .new-arrival-page {
+    padding: 14px;
+  }
+
+  .new-arrival-header h1 {
+    font-size: 26px;
+  }
+
+  .arrival-products {
+    gap: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .arrival-card-top {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .arrival-description {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .arrival-card-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
