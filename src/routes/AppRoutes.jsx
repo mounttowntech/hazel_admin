@@ -15,6 +15,10 @@ import ProductList from "../pages/admin/catalog/products/ProductList";
 import ProductVariantList from "../pages/admin/catalog/productVariant/ProductVariant";
 import SizeList from "../pages/admin/catalog/size/SizeList";
 import ColorList from "../pages/admin/catalog/color/Colorlist"
+import BannerList from "../pages/admin/banner/BannerList";
+import BannerProductList from "../pages/admin/bannerProduct/BannerProductList";
+import NewArrivalList from "../pages/admin/newArrival/NewArrivalList";
+import NewArrivalForm from "../pages/admin/newArrival/NewArrivalForm";
 
 const AppRoutes = () => {
   return (
@@ -39,7 +43,14 @@ const AppRoutes = () => {
         <Route path="/admin/catalog/product-variants" element={<ProductVariantList />} />
         <Route path="/admin/catalog/size" element={<SizeList />} />
         <Route path="/admin/catalog/colors" element={<ColorList />} />
-        {/* add more admin routes here, all under this same AdminLayout wrapper */}
+        <Route path="/admin/promotions/banners" element={<BannerList/>}/>
+       <Route
+  path="/admin/promotions/banner-products"
+  element={<BannerProductList />}
+/>
+<Route path="/admin/promotions/new-arrivals" element={<NewArrivalList/>}/>
+<Route path="/admin/promotions/new-arrivals/create" element={<NewArrivalForm/>}/>
+<Route path="/admin/promotions/new-arrivals/:id/edit" element={<NewArrivalForm/>}/>
       </Route>
 
       {/* =================================
